@@ -1,4 +1,4 @@
-package org.deguet.gutils.vote;
+package org.deguet.gutils.vote.grade;
 
 import java.util.*;
 
@@ -124,5 +124,21 @@ public class GradeVote implements Iterable<String> {
         TreeMap<String,Integer> sorted = new TreeMap<>(comparator);
         sorted.putAll(this.grades);
         return sorted.keySet().iterator();
+    }
+
+    public boolean isBest(String candidate) {
+        int grade = this.gradeFor(candidate);
+        for (String other : this.candidates()){
+            if (gradeFor(other) > grade) return false;
+        }
+        return true;
+    }
+
+    public boolean isWorst(String candidate) {
+        int grade = this.gradeFor(candidate);
+        for (String other : this.candidates()){
+            if (gradeFor(other) < grade) return false;
+        }
+        return true;
     }
 }

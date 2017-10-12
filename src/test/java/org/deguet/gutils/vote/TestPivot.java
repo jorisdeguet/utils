@@ -1,5 +1,10 @@
 package org.deguet.gutils.vote;
 
+import org.deguet.gutils.vote.grade.GradeBallot;
+import org.deguet.gutils.vote.grade.GradeVote;
+import org.deguet.gutils.vote.preferential.PreferentialBallot;
+import org.deguet.gutils.vote.preferential.PreferentialVote;
+import org.deguet.gutils.vote.preferential.TidemanOnBallotBox;
 import org.junit.Test;
 
 import java.util.Arrays;

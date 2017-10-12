@@ -2,6 +2,9 @@ package org.deguet.gutils.vote;
 
 import junit.framework.Assert;
 
+import org.deguet.gutils.vote.preferential.PreferentialBallot;
+import org.deguet.gutils.vote.preferential.PreferentialVote;
+import org.deguet.gutils.vote.preferential.TidemanOnBallotBox;
 import org.junit.Test;
 
 public class TestTideman {
@@ -24,14 +27,14 @@ public class TestTideman {
 		bb.add(PreferentialVote.fromCondense("C>B>D"),13);
 		bb.add(PreferentialVote.fromCondense("D>B>A"),44);
 		bb.add(PreferentialVote.fromCondense("E>B>D"),3);
-		TidemanOnBallotBox   tideman = new TidemanOnBallotBox  (bb);
+		TidemanOnBallotBox tideman = new TidemanOnBallotBox  (bb);
 		System.out.println("Results " + tideman.results());
 	}
 	
 	@Test(timeout = 10000)
 	public void testTidemanConsensus2(){
-		PreferentialBallot   bb = new PreferentialBallot  ();
-		PreferentialVote   vote = new PreferentialVote  ().addAtRank(1, "Paul").addAtRank(4,"Peter").addAtRank(5,"Billy");
+		PreferentialBallot bb = new PreferentialBallot  ();
+		PreferentialVote   vote = new PreferentialVote().addAtRank(1, "Paul").addAtRank(4,"Peter").addAtRank(5,"Billy");
 		for (int i = 0 ; i < 10 ; i++){
 			bb.add(vote);
 		}

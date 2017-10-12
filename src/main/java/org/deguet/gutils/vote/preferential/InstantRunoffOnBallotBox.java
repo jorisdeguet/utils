@@ -1,4 +1,4 @@
-package org.deguet.gutils.vote;
+package org.deguet.gutils.vote.preferential;
 
 import java.util.HashSet;
 import java.util.Map;

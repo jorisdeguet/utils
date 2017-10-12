@@ -1,5 +1,8 @@
 package org.deguet.gutils.vote;
 
+import org.deguet.gutils.vote.preferential.InstantRunoffOnBallotBox;
+import org.deguet.gutils.vote.preferential.PreferentialBallot;
+import org.deguet.gutils.vote.preferential.PreferentialVote;
 import org.junit.Test;
 
 import org.deguet.gutils.random.CopiableRandom;

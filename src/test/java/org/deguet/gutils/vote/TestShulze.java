@@ -8,6 +8,9 @@ import java.util.Set;
 
 import junit.framework.Assert;
 
+import org.deguet.gutils.vote.preferential.PreferentialBallot;
+import org.deguet.gutils.vote.preferential.PreferentialVote;
+import org.deguet.gutils.vote.preferential.ShulzeOnBallotBox;
 import org.junit.Test;
 
 import org.deguet.gutils.random.CopiableRandom;
@@ -23,12 +26,12 @@ public class TestShulze {
 
 	@Test(timeout = 10000)
 	public void testNeverFirstButWinsWithBallotBox(){
-		PreferentialBallot   bb = new PreferentialBallot  ();
+		PreferentialBallot bb = new PreferentialBallot  ();
 		bb.add(PreferentialVote.fromCondense("A>B>C"));
 		bb.add(PreferentialVote.fromCondense("C>B>D"));
 		bb.add(PreferentialVote.fromCondense("D>B>A"));
 		bb.add(PreferentialVote.fromCondense("E>B>D"));
-		ShulzeOnBallotBox   shulze = new ShulzeOnBallotBox  (bb);
+		ShulzeOnBallotBox shulze = new ShulzeOnBallotBox  (bb);
 		System.out.println("Results " + shulze.results());
 	}
 

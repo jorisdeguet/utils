@@ -1,4 +1,4 @@
-package org.deguet.gutils.vote;
+package org.deguet.gutils.vote.preferential;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -95,6 +95,7 @@ public class PreferentialBallot  {
 		DGraph<String,Long> res = new DGraphMatrix<>();
 		Set<String>  cands = this.candidates();
 		for (String a : cands){
+			res = res.addVertex(a);
 			for (String b : cands){
 				if (a != b){
 					long score = 0;

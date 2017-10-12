@@ -1,4 +1,4 @@
-package org.deguet.gutils.vote;
+package org.deguet.gutils.vote.preferential;
 
 import java.util.ArrayList;
 import java.util.List;

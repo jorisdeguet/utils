@@ -1,4 +1,4 @@
-package org.deguet.gutils.vote;
+package org.deguet.gutils.vote.grade;
 
 import java.util.*;
 
@@ -37,6 +37,43 @@ public final strictfp class GradeBallot {
         return total;
     }
 
+    public Set<String> candidates(){
+        Set<String> res = new HashSet<>();
+        for (GradeVote v : ballots.keySet()){
+            res.addAll(v.candidates());
+        }
+        return res;
+    }
+
+    public SortedMap<Integer,Long> distributionFor(String candidate){
+        SortedMap<Integer, Long> res = new TreeMap<>();
+        for (GradeVote v : ballots.keySet()){
+            int grade = v.gradeFor(candidate);
+            if (!res.containsKey(grade)) res.put(grade, 0L);
+            res.put(grade, ballots.get(v)+res.get(grade));
+        }
+        return res;
+    }
+
+    public Long countHowManyTimesBest(String candidate){
+        Long result = 0L;
+        for (GradeVote v : ballots.keySet()){
+            if(v.isBest(candidate)){
+                result += ballots.get(v);
+            }
+        }
+        return result;
+    }
+
+    public Long countHowManyTimesWorst(String candidate){
+        Long result = 0L;
+        for (GradeVote v : ballots.keySet()){
+            if(v.isWorst(candidate)){
+                result += ballots.get(v);
+            }
+        }
+        return result;
+    }
 
     public void add(GradeVote vote) {
         if (ballots.containsKey(vote)){

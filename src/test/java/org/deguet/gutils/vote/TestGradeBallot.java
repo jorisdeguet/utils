@@ -1,5 +1,7 @@
 package org.deguet.gutils.vote;
 
+import org.deguet.gutils.vote.grade.GradeBallot;
+import org.deguet.gutils.vote.grade.GradeVote;
 import org.junit.Assert;
 import org.junit.Test;
 

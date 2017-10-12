@@ -7,6 +7,8 @@ import org.deguet.gutils.graph.DGraph;
 import org.deguet.gutils.graph.DGraphs;
 import org.deguet.gutils.random.CopiableRandom;
 
+import org.deguet.gutils.vote.preferential.Condorcet;
+import org.deguet.gutils.vote.preferential.PreferentialVote;
 import org.junit.Test;
 
 public class TestCondorcet {

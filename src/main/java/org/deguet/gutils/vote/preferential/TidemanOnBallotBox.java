@@ -1,4 +1,4 @@
-package org.deguet.gutils.vote;
+package org.deguet.gutils.vote.preferential;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +31,9 @@ public class TidemanOnBallotBox {
 		//for (Trio<T,T,Long> elt : sorted)System.out.println(elt);
 		
 		DGraph<String,Long> acyclic = new DGraphMatrix<>();
+		for (String candidate : bbox.candidates()){
+			acyclic = acyclic.addVertex(candidate);
+		}
 		for (Trio<String,String,Long> elt : sorted){
 			DGraph<String,Long> candidate = acyclic.addEdge(elt.get1(), elt.get2(), elt.get3());
 			if (!DGraphs.isCyclic(candidate)){
