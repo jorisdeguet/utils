@@ -1,12 +1,10 @@
 package org.deguet.gutils.vote.preferential;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import org.deguet.gutils.graph.DGraph;
 import org.deguet.gutils.graph.DGraphMatrix;
+import org.deguet.gutils.vote.grade.GradeVote;
 
 /**
  * Compiles ballot without keeping all of them.
@@ -137,7 +135,38 @@ public class PreferentialBallot  {
 		}
 		return g;
 	}
-	
+
+	public SortedMap<Integer,Long> distributionFor(String candidate){
+		SortedMap<Integer, Long> res = new TreeMap<>();
+		for (PreferentialVote v : votes.keySet()){
+			Integer rank = v.safeRankFor(candidate);
+			if (!res.containsKey(rank)) res.put(rank, 0L);
+			res.put(rank, votes.get(v)+res.get(rank));
+		}
+		return res;
+	}
+
+	public Long countHowManyTimesBest(String candidate){
+		Long result = 0L;
+		for (PreferentialVote v : votes.keySet()){
+			if(v.isBest(candidate)){
+				result += votes.get(v);
+			}
+		}
+		return result;
+	}
+
+	public Long countHowManyTimesWorst(String candidate){
+		Long result = 0L;
+		for (PreferentialVote v : votes.keySet()){
+			if(v.isWorst(candidate)){
+				result += votes.get(v);
+			}
+		}
+		return result;
+	}
+
+
 	public String toString(){
 		return this.stringMatrix(10);
 	}

@@ -2,7 +2,11 @@ package org.deguet.gutils.vote.grade;
 
 import java.util.*;
 
-// inspired by http://rangevoting.org
+/**
+ * Grade vote is associating a grade up to 10 to each candidate
+ *
+ * inspired by http://rangevoting.org
+ */
 public final strictfp class GradeBallot {
 
     public List<GradeVote> getBallots() {
@@ -22,8 +26,8 @@ public final strictfp class GradeBallot {
     }
 
     public Map<String,Long> results(){
-        Map<String,Long> total = new TreeMap<String,Long>();
-        Map<String,Long> count = new TreeMap<String,Long>();
+        Map<String,Long> total = new TreeMap<>();
+        Map<String,Long> count = new TreeMap<>();
         for (GradeVote vote : ballots.keySet()){
             long qty = ballots.get(vote);
             for (String candidate : vote.candidates()){
