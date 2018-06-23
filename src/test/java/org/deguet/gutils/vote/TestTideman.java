@@ -23,10 +23,10 @@ public class TestTideman {
 	@Test(timeout = 10000)
 	public void testNeverFirstButWinsWithBallotBox2(){
 		PreferentialBallot   bb = new PreferentialBallot  ();
-		bb.add(PreferentialVote.fromCondense("A>B>C"),7);
-		bb.add(PreferentialVote.fromCondense("C>B>D"),13);
-		bb.add(PreferentialVote.fromCondense("D>B>A"),44);
-		bb.add(PreferentialVote.fromCondense("E>B>D"),3);
+		bb.add(PreferentialVote.fromCondense("A>B>C"),7L);
+		bb.add(PreferentialVote.fromCondense("C>B>D"),13L);
+		bb.add(PreferentialVote.fromCondense("D>B>A"),44L);
+		bb.add(PreferentialVote.fromCondense("E>B>D"),3L);
 		TidemanOnBallotBox tideman = new TidemanOnBallotBox  (bb);
 		System.out.println("Results " + tideman.results());
 	}

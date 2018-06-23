@@ -81,7 +81,7 @@ public class TestShulze {
 	public void testShulzeConsensus2(){
 		PreferentialBallot   bb = new PreferentialBallot  ();
 		PreferentialVote   vote = new PreferentialVote  ().addAtRank(1, "Paul").addAtRank(4,"Peter").addAtRank(5,"Billy");
-		bb.add(vote,10);
+		bb.add(vote,10L);
 		ShulzeOnBallotBox   shulze = new ShulzeOnBallotBox  (bb);
 		List<Set<String>> results = shulze.results();
 		System.out.println("Results " + results);
@@ -104,14 +104,14 @@ public class TestShulze {
 	public void testShulzeWikipedia(int amount){
 		int mult = amount;
 		PreferentialBallot   bb = new PreferentialBallot  ();
-		bb.add(PreferentialVote.fromCondense("A>C>B>E>D"), 5*mult);
-		bb.add(PreferentialVote.fromCondense("A>D>E>C>B"), 5*mult);
-		bb.add(PreferentialVote.fromCondense("B>E>D>A>C"), 8*mult);
-		bb.add(PreferentialVote.fromCondense("C>A>B>E>D"), 3*mult);
-		bb.add(PreferentialVote.fromCondense("C>A>E>B>D"), 7*mult);
-		bb.add(PreferentialVote.fromCondense("C>B>A>D>E"), 2*mult);
-		bb.add(PreferentialVote.fromCondense("D>C>E>B>A"), 7*mult);
-		bb.add(PreferentialVote.fromCondense("E>B>A>D>C"), 8*mult);
+		bb.add(PreferentialVote.fromCondense("A>C>B>E>D"), 5L*mult);
+		bb.add(PreferentialVote.fromCondense("A>D>E>C>B"), 5L*mult);
+		bb.add(PreferentialVote.fromCondense("B>E>D>A>C"), 8L*mult);
+		bb.add(PreferentialVote.fromCondense("C>A>B>E>D"), 3L*mult);
+		bb.add(PreferentialVote.fromCondense("C>A>E>B>D"), 7L*mult);
+		bb.add(PreferentialVote.fromCondense("C>B>A>D>E"), 2L*mult);
+		bb.add(PreferentialVote.fromCondense("D>C>E>B>A"), 7L*mult);
+		bb.add(PreferentialVote.fromCondense("E>B>A>D>C"), 8L*mult);
 		ShulzeOnBallotBox   shulze = new ShulzeOnBallotBox  (bb);
 		List<Set <String> > r = shulze.results();
 		List<Set <String> > expected = new ArrayList< >();

@@ -4,6 +4,7 @@ import java.util.*;
 
 import org.deguet.gutils.graph.DGraph;
 import org.deguet.gutils.graph.DGraphMatrix;
+import org.deguet.gutils.nuplets.Trio;
 import org.deguet.gutils.vote.grade.GradeVote;
 
 /**
@@ -14,12 +15,12 @@ import org.deguet.gutils.vote.grade.GradeVote;
  */
 public class PreferentialBallot  {
 	
-	private final Map<PreferentialVote,Integer> votes = new HashMap<PreferentialVote,Integer>();
+	private final Map<PreferentialVote,Long> votes = new HashMap<>();
 	
 	// cached graph
 	private DGraph<String,Long> pairwise;
 	
-	public void add(PreferentialVote vote, Integer qty){
+	public void add(PreferentialVote vote, Long qty){
 		if (votes.containsKey(vote)){
 			votes.put(vote, votes.get(vote)+qty);
 		}else{
@@ -29,13 +30,13 @@ public class PreferentialBallot  {
 	}
 	
 	public void add(PreferentialVote vote){
-		add(vote,1);
+		add(vote,1L);
 	}
 	
 	public PreferentialBallot  without(String... candidates){
 		PreferentialBallot  result = new PreferentialBallot ();
 		for (PreferentialVote  v : votes.keySet()){
-			int number = votes.get(v);
+			long number = votes.get(v);
 			PreferentialVote  without = v.without(candidates);
 			//System.out.println(without.toCondense() +"   " + v);
 			result.add(without, number);
@@ -111,9 +112,44 @@ public class PreferentialBallot  {
 		pairwise = deleteSmallerEdge(res);
 		return pairwise;
 	}
+
+	public DGraph<String,Trio<Long,Long,Long>> computeDetailedPairwise(){
+		DGraph<String,Trio<Long,Long,Long>> res = new DGraphMatrix<>();
+		Set<String>  cands = this.candidates();
+		for (String a : cands){
+			res = res.addVertex(a);
+			for (String b : cands){
+				if (a != b){
+					Long first = 0L;
+					Long second = 0L;
+					Long ties = 0L;
+					//Long total = 0L;
+					// go through all votes for this pair of candidates
+					for (PreferentialVote  vote: votes.keySet()){
+						int s = vote.score(a, b);
+						long count = votes.get(vote);
+						//System.out.println(vote + "  gives  "+s );
+						//total +=count;
+						if (s > 0) { first+=count; }
+						else if (s < 0) { second+=count; }
+						else if (s == 0) { ties+=count; }
+					}
+					//System.out.println(a + " " + b+"    >>    "+total+ " = " + first + " + " + second + " + " + ties );
+					if (first >= second){
+						Trio<Long,Long,Long> tag = Trio.t(first, ties, second);
+						res = res.addEdge(a, b, tag);
+					} else {
+						Trio<Long,Long,Long> tag = Trio.t(second, ties, first);
+						res = res.addEdge(b, a, tag);
+					}
+				}
+			}
+		}
+		return res;
+	}
 	
 	private static    DGraph<String, Long> deleteSmallerEdge(DGraph<String, Long> g) {
-		String[] vs = (String[]) g.vertices().toArray(new String[g.vertices().size()]);
+		String[] vs = g.vertices().toArray(new String[g.vertices().size()]);
 		for (int i = 0 ; i < vs.length ; i++){
 			for (int j = i+1 ; j < vs.length ; j++){
 				String a = vs[i];
