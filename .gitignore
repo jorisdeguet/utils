@@ -2,3 +2,5 @@ dea/
 target/
 *.min.js
 *.iml
+.idea/
+**TestSVG**
