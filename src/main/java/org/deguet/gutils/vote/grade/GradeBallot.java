@@ -27,13 +27,11 @@ public final strictfp class GradeBallot {
 
     public Map<String,Long> results(){
         Map<String,Long> total = new TreeMap<>();
-        Map<String,Long> count = new TreeMap<>();
         for (GradeVote vote : ballots.keySet()){
             long qty = ballots.get(vote);
             for (String candidate : vote.candidates()){
                 if (!total.containsKey(candidate)){
                     total.put(candidate,0L);
-                    count.put(candidate,0L);
                 }
                 total.put(candidate, total.get(candidate)+vote.gradeFor(candidate)*qty);
             }
@@ -77,6 +75,30 @@ public final strictfp class GradeBallot {
             }
         }
         return result;
+    }
+
+    public Integer minFor(String candidate){
+        Integer result = 100;
+        for (GradeVote v : ballots.keySet()){
+            if(v.gradeFor(candidate) < result){
+                result = v.gradeFor(candidate);
+            }
+        }
+        return result;
+    }
+
+    public Integer maxFor(String candidate){
+        Integer result = -1;
+        for (GradeVote v : ballots.keySet()){
+            if(v.gradeFor(candidate) > result){
+                result = v.gradeFor(candidate);
+            }
+        }
+        return result;
+    }
+
+    public Double averageFor(String candidate){
+        return 1.0 * results().get(candidate) / totalVotes();
     }
 
     public void add(GradeVote vote) {
