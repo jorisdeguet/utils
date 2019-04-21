@@ -14,7 +14,7 @@ public class InstantRunoffOnBallotBox {
 	
 	public boolean hasMajority(){
 		Map<String, Double> simples = bbox.nonPreferentialResults();
-		double total = simples.get(null);
+		double total = bbox.totalVotes();
 		System.out.println("Majority " + total);
 		for (String t : simples.keySet()){
 			if (simples.get(t) > total / 2) return true;

@@ -214,5 +214,12 @@ public class PreferentialBallot  {
 	public String stringMatrix(int columnWidth) {
 		return Condorcet.stringMatrix(computePairwise(), columnWidth);
 	}
-	
+
+	public Long totalVotes() {
+		Long result = 0L;
+		for (PreferentialVote v : votes.keySet()){
+			result += votes.get(v);
+		}
+		return result;
+	}
 }
