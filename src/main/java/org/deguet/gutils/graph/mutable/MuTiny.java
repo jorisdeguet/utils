@@ -1,16 +1,12 @@
 package org.deguet.gutils.graph.mutable;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.Map.Entry;
-
 import org.deguet.gutils.nuplets.Duo;
 import org.deguet.gutils.nuplets.Trio;
 import org.deguet.gutils.pairing.Pairing;
 import org.deguet.gutils.pairing.PairingConcat;
+
+import java.util.*;
+import java.util.Map.Entry;
 
 /**
  * Tiny mutable graphs to accelerate things with parser

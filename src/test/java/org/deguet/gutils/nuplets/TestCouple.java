@@ -1,11 +1,10 @@
 package org.deguet.gutils.nuplets;
 
+import junit.framework.Assert;
+import org.junit.Test;
+
 import java.util.Random;
 import java.util.TreeSet;
-
-import junit.framework.Assert;
-
-import org.junit.Test;
 
 public class TestCouple {
 

@@ -1,11 +1,12 @@
 package org.deguet.gutils.graph.mutable;
 
-import java.io.Serializable;
-import java.util.*;
-
 import org.deguet.gutils.graph.ReadableDGraph;
 import org.deguet.gutils.nuplets.Duo;
 import org.deguet.gutils.nuplets.Trio;
+
+import java.io.Serializable;
+import java.util.Map;
+import java.util.Set;
 
 public interface MutableDGraph<V,E> extends Serializable, ReadableDGraph<V,E> {
 

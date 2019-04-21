@@ -1,16 +1,9 @@
 package org.deguet.gutils.pair;
 
 import org.deguet.gutils.nuplets.Duo;
-import org.deguet.gutils.pairing.OrderedPairing;
-import org.deguet.gutils.pairing.Pairing;
-import org.deguet.gutils.pairing.PairingBitInterleave;
-import org.deguet.gutils.pairing.PairingSquare;
+import org.deguet.gutils.pairing.*;
 import org.junit.Assert;
 import org.junit.Test;
-
-import org.deguet.gutils.pairing.PairingCantor;
-import org.deguet.gutils.pairing.PairingConcat;
-import org.deguet.gutils.pairing.PairingHopcroft;
 
 public class TestPair {
 

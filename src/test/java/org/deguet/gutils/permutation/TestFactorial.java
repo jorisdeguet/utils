@@ -1,10 +1,9 @@
 package org.deguet.gutils.permutation;
 
-import java.util.Arrays;
-
 import junit.framework.Assert;
-
 import org.junit.Test;
+
+import java.util.Arrays;
 
 public class TestFactorial {
 

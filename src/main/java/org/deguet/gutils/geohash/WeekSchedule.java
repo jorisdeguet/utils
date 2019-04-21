@@ -1,10 +1,10 @@
 package org.deguet.gutils.geohash;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.deguet.gutils.bit.BitLine;
 import org.deguet.gutils.nuplets.Duo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class WeekSchedule {
 

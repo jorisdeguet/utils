@@ -1,10 +1,11 @@
 package org.deguet.gutils.geohash;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-
-import org.junit.*;
 
 public class TestWeekSchedule {
 

@@ -1,10 +1,10 @@
 package org.deguet.gutils.graph;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadMXBean;
-
 import org.deguet.gutils.nuplets.Duo;
 import org.junit.Test;
+
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
 
 public class TestPerformance {
 

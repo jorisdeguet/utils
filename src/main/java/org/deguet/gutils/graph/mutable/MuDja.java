@@ -1,12 +1,12 @@
 package org.deguet.gutils.graph.mutable;
 
+import org.deguet.gutils.nuplets.Duo;
+import org.deguet.gutils.nuplets.Trio;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-import org.deguet.gutils.nuplets.Duo;
-import org.deguet.gutils.nuplets.Trio;
 
 /**
  * MUTABLE Class

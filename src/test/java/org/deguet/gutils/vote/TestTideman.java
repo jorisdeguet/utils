@@ -1,7 +1,6 @@
 package org.deguet.gutils.vote;
 
 import junit.framework.Assert;
-
 import org.deguet.gutils.vote.preferential.PreferentialBallot;
 import org.deguet.gutils.vote.preferential.PreferentialVote;
 import org.deguet.gutils.vote.preferential.TidemanOnBallotBox;
@@ -16,8 +15,7 @@ public class TestTideman {
 		bb.add(PreferentialVote.fromCondense("C>B>D"));
 		bb.add(PreferentialVote.fromCondense("D>B>A"));
 		bb.add(PreferentialVote.fromCondense("E>B>D"));
-		TidemanOnBallotBox tideman = new TidemanOnBallotBox(bb);
-		System.out.println("Results " + tideman.results());
+		System.out.println("Results " + TidemanOnBallotBox.resultsFromBallot(bb));
 	}
 	
 	@Test(timeout = 10000)
@@ -27,8 +25,7 @@ public class TestTideman {
 		bb.add(PreferentialVote.fromCondense("C>B>D"),13L);
 		bb.add(PreferentialVote.fromCondense("D>B>A"),44L);
 		bb.add(PreferentialVote.fromCondense("E>B>D"),3L);
-		TidemanOnBallotBox tideman = new TidemanOnBallotBox  (bb);
-		System.out.println("Results " + tideman.results());
+		System.out.println("Results " + TidemanOnBallotBox.resultsFromBallot(bb));
 	}
 	
 	@Test(timeout = 10000)
@@ -38,9 +35,8 @@ public class TestTideman {
 		for (int i = 0 ; i < 10 ; i++){
 			bb.add(vote);
 		}
-		TidemanOnBallotBox   tideman = new TidemanOnBallotBox  (bb);
-		System.out.println("Results " + tideman.results());
-		Assert.assertEquals("Result is the same as the unique vote", vote.toCondense(), tideman.results().toCondense());
+		System.out.println("Results " + TidemanOnBallotBox.resultsFromBallot(bb));
+		Assert.assertEquals("Result is the same as the unique vote", vote.toCondense(), TidemanOnBallotBox.resultsFromBallot(bb).toCondense());
 		
 	}
 	

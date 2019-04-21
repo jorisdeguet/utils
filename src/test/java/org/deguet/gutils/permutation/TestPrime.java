@@ -1,9 +1,9 @@
 package org.deguet.gutils.permutation;
 
-import java.util.Arrays;
-
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 public class TestPrime {
 

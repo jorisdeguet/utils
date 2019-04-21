@@ -1,14 +1,9 @@
 package org.deguet.gutils.graph.mutable;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.deguet.gutils.nuplets.Duo;
 import org.deguet.gutils.nuplets.Trio;
+
+import java.util.*;
 
 public abstract class AbstractMutableDGraph<V,E> implements  MutableDGraph<V,E> {
 

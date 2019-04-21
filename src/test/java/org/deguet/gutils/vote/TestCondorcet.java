@@ -1,15 +1,14 @@
 package org.deguet.gutils.vote;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.deguet.gutils.graph.DGraph;
 import org.deguet.gutils.graph.DGraphs;
 import org.deguet.gutils.random.CopiableRandom;
-
 import org.deguet.gutils.vote.preferential.Condorcet;
 import org.deguet.gutils.vote.preferential.PreferentialVote;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestCondorcet {
 

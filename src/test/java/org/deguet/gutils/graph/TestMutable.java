@@ -1,15 +1,16 @@
 package org.deguet.gutils.graph;
 
 
-import java.util.*;
-
 import org.deguet.gutils.graph.mutable.MuDja;
+import org.deguet.gutils.graph.mutable.MuTiny;
 import org.deguet.gutils.graph.mutable.MutableDGraph;
 import org.deguet.gutils.nuplets.Duo;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.deguet.gutils.graph.mutable.MuTiny;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 public class TestMutable{	
 	

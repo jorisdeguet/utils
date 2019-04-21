@@ -1,9 +1,8 @@
 package org.deguet.gutils.graph;
 
+import org.deguet.gutils.random.CopiableRandom;
 import org.junit.Assert;
 import org.junit.Test;
-
-import org.deguet.gutils.random.CopiableRandom;
 
 
 public class TestUndirGraph {

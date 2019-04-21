@@ -1,11 +1,10 @@
 package org.deguet.gutils.vote.preferential;
 
-import java.util.*;
-
 import org.deguet.gutils.graph.DGraph;
 import org.deguet.gutils.graph.DGraphMatrix;
 import org.deguet.gutils.nuplets.Trio;
-import org.deguet.gutils.vote.grade.GradeVote;
+
+import java.util.*;
 
 /**
  * Compiles ballot without keeping all of them.
@@ -46,7 +45,7 @@ public class PreferentialBallot  {
 	
 	/**
 	 * compute results as if only the first vote was taken into account.
-	 * if the rankedvote contains a tie, we split into 1/n where n the nimber of tied candidates
+	 * if the rankedvote contains a tie, we split into 1/n where n the number of tied candidates
 	 * @return
 	 */
 	public Map<String,Double> nonPreferentialResults(){
@@ -63,7 +62,7 @@ public class PreferentialBallot  {
 				total += part;
 			}
 		}
-		result.put(null, total);
+		//result.put(null, total);
 		System.out.println("Total " + total);
 		return result;
 	}

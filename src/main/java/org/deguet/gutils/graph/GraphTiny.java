@@ -1,11 +1,11 @@
 package org.deguet.gutils.graph;
 
+import org.deguet.gutils.bit.BitTriangle;
+import org.deguet.gutils.nuplets.Duo;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
-import org.deguet.gutils.bit.BitTriangle;
-import org.deguet.gutils.nuplets.Duo;
 
 /**
  * Immutable Class.

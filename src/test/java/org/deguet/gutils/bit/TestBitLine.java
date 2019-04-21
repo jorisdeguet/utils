@@ -1,15 +1,13 @@
 package org.deguet.gutils.bit;
 
+import junit.framework.Assert;
+import org.deguet.gutils.nuplets.Duo;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.TreeSet;
-
-import junit.framework.Assert;
-
-import org.junit.Test;
-
-import org.deguet.gutils.nuplets.Duo;
 
 
 

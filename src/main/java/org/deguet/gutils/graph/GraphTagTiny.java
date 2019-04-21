@@ -1,13 +1,13 @@
 package org.deguet.gutils.graph;
 
+import org.deguet.gutils.nuplets.Duo;
+import org.deguet.gutils.pairing.Pairing;
+import org.deguet.gutils.pairing.PairingHopcroft;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-import org.deguet.gutils.nuplets.Duo;
-import org.deguet.gutils.pairing.Pairing;
-import org.deguet.gutils.pairing.PairingHopcroft;
 
 /**
  * This class implements an undirected graph with labels on its edges.

@@ -1,6 +1,7 @@
 package org.deguet.gutils.list;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * Immutable generic list based on the idea of LISP lists.

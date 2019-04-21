@@ -1,18 +1,17 @@
 package org.deguet.gutils.graph;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.deguet.gutils.nuplets.Duo;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;
 import java.util.Random;
 import java.util.Set;
 
-import org.junit.Assert;
-import org.junit.Test;
-
-import org.deguet.gutils.nuplets.Duo;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestDirectedGraph{	
 	

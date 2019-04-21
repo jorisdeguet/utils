@@ -1,13 +1,12 @@
 package org.deguet.gutils.string;
 
-import java.io.IOException;
-import java.util.List;
-
+import org.deguet.gutils.graph.Graph;
+import org.deguet.gutils.graph.export.SVGthroughGraphViz;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.deguet.gutils.graph.Graph;
-import org.deguet.gutils.graph.export.SVGthroughGraphViz;
+import java.io.IOException;
+import java.util.List;
 
 public class TestDistance {
 

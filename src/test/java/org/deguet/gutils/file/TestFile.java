@@ -1,9 +1,9 @@
 package org.deguet.gutils.file;
 
+import org.junit.Assert;
+
 import java.io.File;
 import java.io.IOException;
-
-import org.junit.Assert;
 
 
 public class TestFile {

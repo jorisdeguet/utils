@@ -1,11 +1,11 @@
 package org.deguet.gutils.vote.preferential;
 
+import org.deguet.gutils.graph.DGraph;
+import org.deguet.gutils.graph.DGraphs;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
-import org.deguet.gutils.graph.DGraph;
-import org.deguet.gutils.graph.DGraphs;
 
 public class ShulzeOnBallotBox {
 

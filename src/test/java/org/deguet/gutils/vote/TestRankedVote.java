@@ -1,14 +1,10 @@
 package org.deguet.gutils.vote;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
 import org.deguet.gutils.vote.preferential.PreferentialVote;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.*;
 
 public class TestRankedVote {
 

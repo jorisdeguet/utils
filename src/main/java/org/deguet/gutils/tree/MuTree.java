@@ -1,10 +1,10 @@
 package org.deguet.gutils.tree;
 
+import org.deguet.gutils.string.Blanks;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.deguet.gutils.string.Blanks;
 
 /**
  * Trees.

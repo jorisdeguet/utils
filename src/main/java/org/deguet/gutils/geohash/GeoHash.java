@@ -1,9 +1,9 @@
 package org.deguet.gutils.geohash;
 
-import java.util.Random;
-
 import org.deguet.gutils.bit.BitLine;
 import org.deguet.gutils.nuplets.Duo;
+
+import java.util.Random;
 
 /**
  * Implements a GeoHash where latitude and longitudes are cut into halves to determine bits in a String

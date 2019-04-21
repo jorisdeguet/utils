@@ -1,10 +1,9 @@
 package org.deguet.gutils.graph;
 
-import java.io.IOException;
-
+import org.deguet.gutils.graph.export.SVGthroughGraphViz;
 import org.junit.Test;
 
-import org.deguet.gutils.graph.export.SVGthroughGraphViz;
+import java.io.IOException;
 
 public class TestSVG {
 

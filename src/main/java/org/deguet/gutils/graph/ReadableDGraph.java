@@ -1,9 +1,9 @@
 package org.deguet.gutils.graph;
 
-import java.util.Set;
-
 import org.deguet.gutils.nuplets.Duo;
 import org.deguet.gutils.nuplets.Trio;
+
+import java.util.Set;
 
 /**
  * Readable DGraph

@@ -1,12 +1,11 @@
 package org.deguet.gutils.permutation;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.*;
 
-
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 
 public class TestPermut {

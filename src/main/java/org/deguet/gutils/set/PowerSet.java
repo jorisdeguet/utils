@@ -1,10 +1,10 @@
 package org.deguet.gutils.set;
 
+import org.deguet.gutils.bit.BitLine;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-
-import org.deguet.gutils.bit.BitLine;
 
 /**
  * Implements a generator type iterable for a powerset.

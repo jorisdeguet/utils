@@ -102,12 +102,7 @@ public final strictfp class GradeBallot {
     }
 
     public void add(GradeVote vote) {
-        if (ballots.containsKey(vote)){
-            ballots.put(vote , ballots.get(vote) + 1);
-        }
-        else{
-            ballots.put(vote , 1L);
-        }
+        this.add(vote, 1L);
     }
 
     public long totalVotes(){

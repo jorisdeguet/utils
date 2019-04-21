@@ -1,13 +1,10 @@
 package org.deguet.gutils.geohash;
 
-import static org.junit.Assert.assertTrue;
-
-import java.util.Random;
-
 import junit.framework.Assert;
-
 import org.deguet.gutils.nuplets.Duo;
 import org.junit.Test;
+
+import java.util.Random;
 
 
 public class TestGeo {

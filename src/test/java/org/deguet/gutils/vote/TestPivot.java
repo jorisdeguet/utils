@@ -42,7 +42,7 @@ public class TestPivot {
         }
         System.out.println(ballot.results());
         PreferentialBallot pref = Pivot.from(ballot);
-        System.out.println(new TidemanOnBallotBox(pref).results());
+        System.out.println(TidemanOnBallotBox.resultsFromBallot(pref));
         System.out.println(pref.toString());
     }
 }

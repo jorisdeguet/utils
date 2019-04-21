@@ -1,12 +1,12 @@
 package org.deguet.gutils.vote.preferential;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import org.deguet.gutils.graph.DGraph;
 import org.deguet.gutils.graph.DGraphMatrix;
 import org.deguet.gutils.string.Blanks;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Condorcet {
 

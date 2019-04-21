@@ -1,8 +1,8 @@
 package org.deguet.gutils.graph;
 
-import java.util.Set;
-
 import org.deguet.gutils.nuplets.Duo;
+
+import java.util.Set;
 
 public interface ReadableGraph<V> {
 

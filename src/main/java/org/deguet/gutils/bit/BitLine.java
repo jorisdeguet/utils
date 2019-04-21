@@ -1,13 +1,9 @@
 
 package org.deguet.gutils.bit;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
-
 import org.deguet.gutils.nuplets.Duo;
+
+import java.util.*;
 
 /**
  * Used to provide an immutable alternative to BitSet in Java.

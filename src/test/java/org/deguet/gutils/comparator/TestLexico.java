@@ -1,10 +1,10 @@
 package org.deguet.gutils.comparator;
 
-import java.util.Comparator;
-import java.util.TreeSet;
-
 import org.deguet.gutils.random.CopiableRandom;
 import org.junit.Test;
+
+import java.util.Comparator;
+import java.util.TreeSet;
 
 public class TestLexico {
 

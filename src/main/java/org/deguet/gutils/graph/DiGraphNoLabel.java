@@ -1,9 +1,9 @@
 package org.deguet.gutils.graph;
 
+import org.deguet.gutils.nuplets.Duo;
+
 import java.io.Serializable;
 import java.util.Set;
-
-import org.deguet.gutils.nuplets.Duo;
 
 /**
  * This interface corresponds to directed graphs, graph where edges are arrows.

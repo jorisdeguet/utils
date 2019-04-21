@@ -1,15 +1,9 @@
 package org.deguet.gutils.graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-
 import org.deguet.gutils.nuplets.Duo;
 import org.deguet.gutils.nuplets.Trio;
+
+import java.util.*;
 
 /**
  * Helpful functions built on top of primitives from the graph

@@ -1,19 +1,17 @@
 package org.deguet.gutils.vote;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import junit.framework.Assert;
-
+import org.deguet.gutils.random.CopiableRandom;
 import org.deguet.gutils.vote.preferential.PreferentialBallot;
 import org.deguet.gutils.vote.preferential.PreferentialVote;
 import org.deguet.gutils.vote.preferential.ShulzeOnBallotBox;
 import org.junit.Test;
 
-import org.deguet.gutils.random.CopiableRandom;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 /**

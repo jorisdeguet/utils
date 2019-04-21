@@ -1,8 +1,8 @@
 package org.deguet.gutils.graph;
 
-import java.util.Set;
-
 import org.deguet.gutils.random.CopiableRandom;
+
+import java.util.Set;
 
 public class Graphs {
 

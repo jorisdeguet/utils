@@ -1,12 +1,12 @@
 package org.deguet.gutils.string;
 
+import org.deguet.gutils.graph.GraphTiny;
+import org.deguet.gutils.nuplets.Duo;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.deguet.gutils.graph.GraphTiny;
-import org.deguet.gutils.nuplets.Duo;
 
 /**
  * Immutable class to compute the edit distance distance or Levensthein distance between two CharSequences
