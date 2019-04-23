@@ -18,7 +18,7 @@ public class Condorcet {
 		throw new NoCondorcetWinner();
 	}
 
-	public static <T>  String stringMatrix(DGraph<T, Long> pairwise, int columnWidth) {
+	public static <T, Y>  String stringMatrix(DGraph<T, Y> pairwise, int columnWidth) {
 		StringBuilder sb = new StringBuilder();
 		Set<T> candidates = pairwise.vertices();
 		int size = columnWidth;
@@ -38,8 +38,8 @@ public class Condorcet {
 			sb.append(String.format("%1$-" + size + "s|", a.toString()));
 			for (T b : candidates){
 				if (a!=b){
-					Long ab = pairwise.getEdge(a, b);
-					Long ba = pairwise.getEdge(b, a);
+					Y ab = pairwise.getEdge(a, b);
+					Y ba = pairwise.getEdge(b, a);
 					if (ab != null){
 						sb.append(String.format("%1$-" + size + "s|", ab));
 					}else if (ba != null){
