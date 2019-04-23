@@ -42,5 +42,4 @@ public class TidemanOnBallotBox {
 		//System.out.println(DGraphs.toDot(acyclic, "a") );
 		return PreferentialVote.fromListOfSet(DGraphs.topoSort(acyclic));
 	}
-	
 }
