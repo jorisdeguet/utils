@@ -16,13 +16,13 @@ public class TestGradeBallot {
         GradeBallot ballot  = new GradeBallot();
         for (int i = 0 ; i < 100 ; i++){
             GradeVote vote = new GradeVote();
-            vote.addAGrade(10, "a","b").addAGrade(3, "c").addAGrade(7,"d");
+            vote.addAGrade(5, "a","b").addAGrade(1, "c").addAGrade(3,"d");
             ballot.add(vote);
         }
 
         for (int i = 0 ; i < 50 ; i++){
             GradeVote vote = new GradeVote();
-            vote.addAGrade(5, "a","b").addAGrade(3, "c");
+            vote.addAGrade(4, "a","b").addAGrade(3, "c");
             ballot.add(vote);
         }
         System.out.println(ballot.results());
@@ -30,11 +30,11 @@ public class TestGradeBallot {
 
     @Test
     public void testGradeVoteFromCondense(){
-        GradeVote vote = GradeVote.fromCondense("8=Jo=To>5=a>0=Mo");
+        GradeVote vote = GradeVote.fromCondense("5=Jo=To>3=a>0=Mo");
         System.out.println(vote);
         GradeVote rec = GradeVote.fromCondense(vote.toCondense());
         Assert.assertEquals(vote, rec);
-        vote.addAGrade(5, "a","b").addAGrade(3, "c");
+        vote.addAGrade(4, "b").addAGrade(3, "c");
         System.out.println(vote);
 
     }

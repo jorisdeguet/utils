@@ -23,7 +23,7 @@ public class GradeVote implements Iterable<String> {
     };
 
     public GradeVote addAGrade(int grade, String... candidates){
-        if (grade < 0 || grade > 10 ) throw new IllegalArgumentException("grades go from 0 to 10");
+        if (grade < 0 || grade > 5 ) throw new IllegalArgumentException("grades go from 0 to 5");
         for (String c : candidates){
             if (grades.containsKey(c) && !grades.get(c).equals(grade))
                 throw new IllegalArgumentException("try to add the same candidate twice with different grades "+c);
@@ -93,7 +93,7 @@ public class GradeVote implements Iterable<String> {
         int size = candidateSet.length;
         GradeVote result = new GradeVote();
         for (int i = 0 ; i < size ; i++){
-            result.addAGrade(r.nextInt(11), candidateSet[i]);
+            result.addAGrade(r.nextInt(6), candidateSet[i]);
         }
         return result;
     }

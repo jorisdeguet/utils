@@ -19,7 +19,7 @@ public class TestPivot {
 
     @Test
     public void testGradeToRank(){
-        GradeVote grade = GradeVote.fromCondense("8=Mo=To>5=Joris>2=Alex>0=Evariste");
+        GradeVote grade = GradeVote.fromCondense("5=Mo=To>4=Joris>2=Alex>0=Evariste");
         System.out.println(grade.toCondense());
         PreferentialVote ranked = Pivot.from(grade);
         System.out.println(ranked.toCondense());
@@ -35,7 +35,7 @@ public class TestPivot {
             GradeVote vote = new GradeVote();
             // grade all candidates
             for (String cand : candidates){
-                vote = vote.addAGrade(r.nextInt(11),cand);
+                vote = vote.addAGrade(r.nextInt(6),cand);
             }
             System.out.println("vote >> " +vote);
             ballot.add(vote);
