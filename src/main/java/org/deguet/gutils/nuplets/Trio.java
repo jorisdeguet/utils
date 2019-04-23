@@ -25,7 +25,7 @@ public final class Trio<A,B,C> implements Serializable,Tuple {
 	private final B two;
 	private final C three;
 	
-	private Integer hash;
+	private transient Integer hash;
 	
 	private Trio(
 			final A o,
