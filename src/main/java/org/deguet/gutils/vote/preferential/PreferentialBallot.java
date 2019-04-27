@@ -122,7 +122,7 @@ public class PreferentialBallot  {
 				if (!x.equals(y)){
 					Trio<Long, Long, Long> aa = a.getEdge(x, y);
 					Trio<Long, Long, Long> bb = b.getEdge(x, y);
-					System.out.println(x + " " + y + " " + aa + "   " + bb);
+					//System.out.println(x + " " + y + " " + aa + "   " + bb);
 					Trio<Long, Long, Long> newValue = Trio.t(
 							aa.get1() + bb.get1(),
 							aa.get2() + bb.get2(),
